@@ -4,7 +4,10 @@
 
 This (for now) only for in local environment with the code of:
 
+``npm install``
+
 ``node server.js``
+
 
 This can also be tested with **Postman**
 
