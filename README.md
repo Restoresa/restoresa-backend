@@ -4,7 +4,7 @@
 
 This (for now) only for in local environment with the code of:
 
-export STRIPE_TOKEN=<token>
+``export STRIPE_TOKEN=<token>``
 
 ``npm install``
 
