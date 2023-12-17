@@ -2,9 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const stripe = require("stripe")(
-  "sk_test_51MxUGcAW162dDEIYuzNESml3i1c4qGygjXDEopV95QmENcEHxalh73gAapAPwEWqYnt3B2WZ53ASX9aQKiUK4wg300jbpflJkR"
-);
+const stripe = require("stripe")(`${process.env.STRIPE_TOKEN}`);
 const port = process.env.PORT || 5040;
 
 app.use(bodyParser.json());
