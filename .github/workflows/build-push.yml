@@ -19,9 +19,8 @@ jobs:
           fi
       
       - name: Check out the repo
-        # if: steps.dependabot_check.outputs.continue == 'true'
-        # uses: actions/checkout@v4
-        run: echo "Debug ${{ steps.dependabot_check.outputs.continue }}"
+        if: steps.dependabot_check.outputs.continue == null
+        uses: actions/checkout@v4
 
       - name: Log in to Docker Hub
         if: steps.dependabot_check.outputs.continue == null
