@@ -18,14 +18,6 @@ jobs:
             echo "continue=false" >> $GITHUB_OUTPUT
           fi
       
-      - name: Check if branch was created by dependabot
-        id: dependabot_check
-        run: |
-          ref_branch=${{ github.ref_name }}
-          if [[ $ref_branch =~ ^dependabot/ ]]; then
-            echo "continue=false" >> $GITHUB_OUTPUT
-          fi
-      
       - name: Check out the repo
         if: github.actor != 'dependabot[bot]' && steps.dependabot_check.outputs.continue == null
         uses: actions/checkout@v4
