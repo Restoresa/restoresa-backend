@@ -39,7 +39,7 @@ jobs:
 
       - name: Build and push Docker image
         if: github.actor != 'dependabot[bot]' && steps.dependabot_check.outputs.continue == null
-        uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
+        uses: docker/build-push-action@5176d81f87c23d6fc96624dfdbcd9f3830bbe445
         env:
           STRIPE_TOKEN: ${{ secrets.STRIPE_TOKEN }}
         with:
